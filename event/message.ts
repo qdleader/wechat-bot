@@ -13,14 +13,15 @@ async function defaultFilter(msg: Message) {
 
 const createdAt = Date.now()
 export async function handleMessage(msg: Message) {
+  console.log(111, msg);
   // 如果是过时的消息，则不理睬
-  if (msg.date().getTime() < createdAt) {
-    return
-  }
+  // if (msg.date().getTime() < createdAt) {
+  //   return
+  // }
   // 如果是自己发的消息，则不理睬
-  if (msg.talker().self()) {
-    return
-  }
+  // if (msg.talker().self()) {
+  //   return
+  // }
   const enable = await defaultFilter(msg)
   if (!enable) {
     return

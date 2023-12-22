@@ -20,9 +20,19 @@ export const routes: Route[] = [
     keyword: '',
     handle: echo.handle,
     // 仅仅是一个示例
-    // 仅仅对名称为 山月 的人，进行原样输出对话
+    // 仅仅对名称为 qdleader 的人，进行原样输出对话
+
+    // filter(msg) {
+    //   return msg.talker().name() === 'qdleader'
+    // },
+  },
+  {
+    keyword: '',
+    handle: echo.handle,
+    // 仅仅是一个示例
+    // 仅仅对名称为 qdleader 的人，进行原样输出对话
     filter(msg) {
-      return msg.talker().name() === '山月'
+      return msg.talker().name() === 'wings'
     },
   },
 ]

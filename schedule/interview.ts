@@ -5,7 +5,7 @@ export default async (bot: Wechaty) => {
   return new CronJob('0 9 * * *', async () => {
     const rooms = await bot.Room.findAll({ topic: /学习/ })
     for (const room of rooms) {
-      if (room.owner().name().includes('山月')) {
+      if (room.owner().name().includes('qdleader')) {
         await room.say('早安')
       }
     }
