@@ -12,6 +12,7 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 const { setGlobalDispatcher, ProxyAgent } = require("undici");
 // const dispatcher = new ProxyAgent({ uri: new URL('http://127.0.0.1:7890').toString() });
 // setGlobalDispatcher(dispatcher);
+console.log('new');
 // Access your API key as an environment variable (see "Set up your API key" above)
 const genAI = new GoogleGenerativeAI('AIzaSyBj70xG5gshJ1XefXrwOE9mRpYUf2lVVu0');
 
